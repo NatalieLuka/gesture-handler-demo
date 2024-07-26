@@ -1,10 +1,6 @@
 import { COLORS } from "../styles/constants";
 import { Tabs } from "expo-router";
-import {
-  FontAwesome,
-  MaterialCommunityIcons,
-  Fontisto,
-} from "@expo/vector-icons";
+import { FontAwesome, MaterialCommunityIcons } from "@expo/vector-icons";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function RootLayout() {
@@ -41,6 +37,32 @@ export default function RootLayout() {
                   color={color}
                 />
               );
+            },
+          }}
+        />
+
+        <Tabs.Screen
+          name="(gyroscope)"
+          options={{
+            title: "Gyroscope",
+            tabBarIcon: ({ color }) => {
+              return (
+                <MaterialCommunityIcons
+                  name="animation-play"
+                  size={24}
+                  color={color}
+                />
+              );
+            },
+          }}
+        />
+
+        <Tabs.Screen
+          name="(escape-game)"
+          options={{
+            title: "Escape Game",
+            tabBarIcon: ({ color }) => {
+              return <FontAwesome name="gamepad" size={24} color={color} />;
             },
           }}
         />
