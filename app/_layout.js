@@ -1,6 +1,10 @@
 import { COLORS } from "../styles/constants";
 import { Tabs } from "expo-router";
-import { FontAwesome, MaterialCommunityIcons } from "@expo/vector-icons";
+import {
+  FontAwesome,
+  MaterialCommunityIcons,
+  FontAwesome5,
+} from "@expo/vector-icons";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function RootLayout() {
@@ -63,6 +67,16 @@ export default function RootLayout() {
             title: "Escape Game",
             tabBarIcon: ({ color }) => {
               return <FontAwesome name="gamepad" size={24} color={color} />;
+            },
+          }}
+        />
+
+        <Tabs.Screen
+          name="(rotation)"
+          options={{
+            title: "Rotation",
+            tabBarIcon: ({ color }) => {
+              return <FontAwesome5 name="compass" size={24} color={color} />;
             },
           }}
         />

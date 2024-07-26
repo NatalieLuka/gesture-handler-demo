@@ -1,16 +1,14 @@
-import { View, Text, StyleSheet, useWindowDimensions } from "react-native";
-import { Link } from "expo-router";
-import { globalStyles } from "../../styles/gobalStyles";
+import { View, StyleSheet, useWindowDimensions } from "react-native";
 import Animated, {
   useSharedValue,
   withSpring,
   useAnimatedStyle,
 } from "react-native-reanimated";
-import { COLORS } from "../../styles/constants/";
+import { COLORS } from "../../styles/constants";
 import { useState, useEffect } from "react";
 import { Gyroscope } from "expo-sensors";
 
-export default function eEcapeGamePage() {
+export default function EscapeGamePage() {
   const [subscription, setSubscription] = useState(null);
   const ballPosition = useSharedValue(0);
   const { width } = useWindowDimensions();
@@ -73,7 +71,6 @@ const styles = StyleSheet.create({
   },
   circle: {
     position: "relative",
-
     width: 60,
     height: 60,
     backgroundColor: COLORS.primary,
